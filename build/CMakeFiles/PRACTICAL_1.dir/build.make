@@ -73,15 +73,15 @@ CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: CMakeFiles/PRACTICAL_1.dir/fl
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: CMakeFiles/PRACTICAL_1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -MF CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o.d -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
+	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -MF CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o.d -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
 
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp > CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i
+	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp > CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i
 
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s
+	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s
 
 # Object files for target PRACTICAL_1
 PRACTICAL_1_OBJECTS = \

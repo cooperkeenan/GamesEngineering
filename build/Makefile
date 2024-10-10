@@ -195,6 +195,19 @@ PRACTICAL_1/fast:
 .PHONY : PRACTICAL_1/fast
 
 #=============================================================================
+# Target rules for targets named 2_INVADERS
+
+# Build rule for target.
+2_INVADERS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 2_INVADERS
+.PHONY : 2_INVADERS
+
+# fast build rule for target.
+2_INVADERS/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/build
+.PHONY : 2_INVADERS/fast
+
+#=============================================================================
 # Target rules for targets named sfml-system
 
 # Build rule for target.
@@ -259,6 +272,30 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
+2_invaders/main.o: 2_invaders/main.cpp.o
+.PHONY : 2_invaders/main.o
+
+# target to build an object file
+2_invaders/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o
+.PHONY : 2_invaders/main.cpp.o
+
+2_invaders/main.i: 2_invaders/main.cpp.i
+.PHONY : 2_invaders/main.i
+
+# target to preprocess a source file
+2_invaders/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.i
+.PHONY : 2_invaders/main.cpp.i
+
+2_invaders/main.s: 2_invaders/main.cpp.s
+.PHONY : 2_invaders/main.s
+
+# target to generate assembly for a file
+2_invaders/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s
+.PHONY : 2_invaders/main.cpp.s
+
 practical_1/main.o: practical_1/main.cpp.o
 .PHONY : practical_1/main.o
 
@@ -297,12 +334,16 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... 2_INVADERS"
 	@echo "... PRACTICAL_1"
 	@echo "... sfml-audio"
 	@echo "... sfml-graphics"
 	@echo "... sfml-network"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
+	@echo "... 2_invaders/main.o"
+	@echo "... 2_invaders/main.i"
+	@echo "... 2_invaders/main.s"
 	@echo "... practical_1/main.o"
 	@echo "... practical_1/main.i"
 	@echo "... practical_1/main.s"

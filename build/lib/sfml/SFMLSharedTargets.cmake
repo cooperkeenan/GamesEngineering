@@ -127,39 +127,39 @@ set_target_properties(sfml-audio PROPERTIES
   INTERFACE_LINK_LIBRARIES "sfml-system"
 )
 
-# Import target "sfml-system" for configuration ""
-set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-system" for configuration "Debug"
+set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-system PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-system.2.6.1.dylib"
-  IMPORTED_SONAME_NOCONFIG "@rpath/libsfml-system.2.6.dylib"
+  IMPORTED_LOCATION_DEBUG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-system-d.2.6.1.dylib"
+  IMPORTED_SONAME_DEBUG "@rpath/libsfml-system-d.2.6.dylib"
   )
 
-# Import target "sfml-window" for configuration ""
-set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-window" for configuration "Debug"
+set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-window PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-window.2.6.1.dylib"
-  IMPORTED_SONAME_NOCONFIG "@rpath/libsfml-window.2.6.dylib"
+  IMPORTED_LOCATION_DEBUG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-window-d.2.6.1.dylib"
+  IMPORTED_SONAME_DEBUG "@rpath/libsfml-window-d.2.6.dylib"
   )
 
-# Import target "sfml-network" for configuration ""
-set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-network" for configuration "Debug"
+set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-network PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-network.2.6.1.dylib"
-  IMPORTED_SONAME_NOCONFIG "@rpath/libsfml-network.2.6.dylib"
+  IMPORTED_LOCATION_DEBUG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-network-d.2.6.1.dylib"
+  IMPORTED_SONAME_DEBUG "@rpath/libsfml-network-d.2.6.dylib"
   )
 
-# Import target "sfml-graphics" for configuration ""
-set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-graphics" for configuration "Debug"
+set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-graphics PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-graphics.2.6.1.dylib"
-  IMPORTED_SONAME_NOCONFIG "@rpath/libsfml-graphics.2.6.dylib"
+  IMPORTED_LOCATION_DEBUG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-graphics-d.2.6.1.dylib"
+  IMPORTED_SONAME_DEBUG "@rpath/libsfml-graphics-d.2.6.dylib"
   )
 
-# Import target "sfml-audio" for configuration ""
-set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-audio" for configuration "Debug"
+set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-audio PROPERTIES
-  IMPORTED_LOCATION_NOCONFIG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-audio.2.6.1.dylib"
-  IMPORTED_SONAME_NOCONFIG "@rpath/libsfml-audio.2.6.dylib"
+  IMPORTED_LOCATION_DEBUG "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/lib/libsfml-audio-d.2.6.1.dylib"
+  IMPORTED_SONAME_DEBUG "@rpath/libsfml-audio-d.2.6.dylib"
   )
 
 # This file does not depend on other imported targets which have

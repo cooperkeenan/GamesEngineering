@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "../../../lib/.2.6"
-  "../../../lib/libsfml-system.2.6.1.dylib"
-  "../../../lib/libsfml-system.2.6.dylib"
-  "../../../lib/libsfml-system.dylib"
-  "../../../lib/libsfml-system.pdb"
+  "../../../lib/libsfml-system-d.2.6.1.dylib"
+  "../../../lib/libsfml-system-d.2.6.dylib"
+  "../../../lib/libsfml-system-d.dylib"
+  "../../../lib/libsfml-system-d.pdb"
   "CMakeFiles/sfml-system.dir/Clock.cpp.o"
   "CMakeFiles/sfml-system.dir/Clock.cpp.o.d"
   "CMakeFiles/sfml-system.dir/Err.cpp.o"

@@ -145,4 +145,3 @@ void Render(RenderWindow &window) {
 }
 
 
-ssh-add ~/Users/cooperkeenan/Documents/GitHub/GamesEngineering/ssh_key

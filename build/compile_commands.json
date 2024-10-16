@@ -12,6 +12,12 @@
   "output": "CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o"
 },
 {
+  "directory": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-14  -isystem /Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/include -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp",
+  "file": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp",
+  "output": "CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o"
+},
+{
   "directory": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/lib/sfml/src/SFML/System",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 -DSFML_SYSTEM_EXPORTS -I/Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/include -I/Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/src -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fPIC -fvisibility=hidden  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/src/SFML/System/Clock.cpp",
   "file": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/src/SFML/System/Clock.cpp",

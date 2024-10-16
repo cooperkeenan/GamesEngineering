@@ -296,6 +296,30 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s
 .PHONY : 2_invaders/main.cpp.s
 
+2_invaders/ship.o: 2_invaders/ship.cpp.o
+.PHONY : 2_invaders/ship.o
+
+# target to build an object file
+2_invaders/ship.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o
+.PHONY : 2_invaders/ship.cpp.o
+
+2_invaders/ship.i: 2_invaders/ship.cpp.i
+.PHONY : 2_invaders/ship.i
+
+# target to preprocess a source file
+2_invaders/ship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.i
+.PHONY : 2_invaders/ship.cpp.i
+
+2_invaders/ship.s: 2_invaders/ship.cpp.s
+.PHONY : 2_invaders/ship.s
+
+# target to generate assembly for a file
+2_invaders/ship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.s
+.PHONY : 2_invaders/ship.cpp.s
+
 practical_1/main.o: practical_1/main.cpp.o
 .PHONY : practical_1/main.o
 
@@ -344,6 +368,9 @@ help:
 	@echo "... 2_invaders/main.o"
 	@echo "... 2_invaders/main.i"
 	@echo "... 2_invaders/main.s"
+	@echo "... 2_invaders/ship.o"
+	@echo "... 2_invaders/ship.i"
+	@echo "... 2_invaders/ship.s"
 	@echo "... practical_1/main.o"
 	@echo "... practical_1/main.i"
 	@echo "... practical_1/main.s"

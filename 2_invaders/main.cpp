@@ -1,12 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "ship.h"
+#include "InvaderManager.h"
 
 std::vector<Ship *> ships;
 sf::Texture spritesheet;
 sf::Sprite invader;
 sf::RenderWindow window(sf::VideoMode({200, 200}), "SFML works!");
 
+InvaderManager* invaderManager;
 
 
 void Load() {
@@ -16,14 +18,15 @@ void Load() {
     invader.setTexture(spritesheet);
     invader.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(32, 32)));
 
-    Invader* inv = new Invader(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(32, 32)), { 100, 100 });
-    ships.push_back(inv);
+    invaderManager = new InvaderManager(window);
+    invaderManager->GenerateInvaders();
 }
 
 
 void Render() {
-    window.draw(invader);
+    invaderManager->Render(window);
 }
+
 
 int main() {
     Load();

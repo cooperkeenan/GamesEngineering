@@ -272,6 +272,30 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
+2_invaders/InvaderManager.o: 2_invaders/InvaderManager.cpp.o
+.PHONY : 2_invaders/InvaderManager.o
+
+# target to build an object file
+2_invaders/InvaderManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o
+.PHONY : 2_invaders/InvaderManager.cpp.o
+
+2_invaders/InvaderManager.i: 2_invaders/InvaderManager.cpp.i
+.PHONY : 2_invaders/InvaderManager.i
+
+# target to preprocess a source file
+2_invaders/InvaderManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.i
+.PHONY : 2_invaders/InvaderManager.cpp.i
+
+2_invaders/InvaderManager.s: 2_invaders/InvaderManager.cpp.s
+.PHONY : 2_invaders/InvaderManager.s
+
+# target to generate assembly for a file
+2_invaders/InvaderManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s
+.PHONY : 2_invaders/InvaderManager.cpp.s
+
 2_invaders/main.o: 2_invaders/main.cpp.o
 .PHONY : 2_invaders/main.o
 
@@ -365,6 +389,9 @@ help:
 	@echo "... sfml-network"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
+	@echo "... 2_invaders/InvaderManager.o"
+	@echo "... 2_invaders/InvaderManager.i"
+	@echo "... 2_invaders/InvaderManager.s"
 	@echo "... 2_invaders/main.o"
 	@echo "... 2_invaders/main.i"
 	@echo "... 2_invaders/main.s"

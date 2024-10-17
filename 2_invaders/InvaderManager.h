@@ -7,9 +7,10 @@ class InvaderManager {
 public:
     InvaderManager(sf::RenderWindow& window);
     void GenerateInvaders();
-    void Render(sf::RenderWindow& window);
+    void Render();
+    void Update(const float& dt);
 
 private:
-    std::vector<Ship*> ships;
+    std::vector<Ship*> ships;  // This will now store all invader ships
     sf::RenderWindow& window;
 };

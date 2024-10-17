@@ -1,12 +1,12 @@
 #include "InvaderManager.h"
 #include <SFML/Graphics.hpp>
 #include "ship.h"
+#include "game.h"
 #include <iostream>
 
 InvaderManager::InvaderManager(sf::RenderWindow& win) : window(win) {}
 
 void InvaderManager::GenerateInvaders() {
-    // Get window size for placement reference
     sf::Vector2u windowSize = window.getSize();
     float windowWidth = static_cast<float>(windowSize.x);
 
@@ -21,11 +21,9 @@ void InvaderManager::GenerateInvaders() {
     float availableWidth = windowWidth - leftMargin - rightMargin;
     float xPosGap = availableWidth / (totalColumns - 1);  
     float yPosGap = 22.0f;    
-    float yPosition = 35.0f;  // Starting y position for the first row
+    float yPosition = 35.0f;
 
-    int vec1 = 0;
-    int vecArr[5] = {32,64,96,128};
-
+    int vecArr[5] = {32, 64, 96, 128};
 
     // Generate invaders in an 11x5 grid
     for (int row = 0; row < totalRows; row++) {
@@ -35,13 +33,18 @@ void InvaderManager::GenerateInvaders() {
             inv->setScale(0.40f, 0.47f);  // Scale down the invader sprite
             ships.push_back(inv);
         }
-        yPosition += yPosGap;  // Move to the next row
+        yPosition += yPosGap;
     }
 }
 
-
-void InvaderManager::Render(sf::RenderWindow& window) {
+void InvaderManager::Render() {
     for (auto ship : ships) {
         window.draw(*ship);
+    }
+}
+
+void InvaderManager::Update(const float& dt) {
+    for (auto ship : ships) {
+        ship->Update(dt);
     }
 }

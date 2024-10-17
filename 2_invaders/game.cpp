@@ -1,22 +1,21 @@
-#include <SFML/Graphics.hpp>
-#include <iostream>
+#include "game.h"
 #include "ship.h"
 #include "InvaderManager.h"
 #include "game.h"
+#include <SFML/Graphics.hpp>
+#include <iostream>
 
 sf::RenderWindow window(sf::VideoMode({gameWidth, gameHeight}), "SFML works!");
 sf::Texture spritesheet;
 Player* player = nullptr;
 InvaderManager* invaderManager = nullptr;
 
-std::vector<Ship*> ships; 
-
 void Load() {
     if (!spritesheet.loadFromFile("res/img/invaders_sheet.png")) {
         std::cerr << "Failed to load spritesheet!" << std::endl;
     }
 
-    // Create player
+    // Initialize Player
     player = new Player();
 
     // Initialize InvaderManager
@@ -28,6 +27,7 @@ void Update(const float& dt) {
     if (player) {
         player->Update(dt);
     }
+
     if (invaderManager) {
         invaderManager->Update(dt);
     }
@@ -45,34 +45,4 @@ void Render() {
     }
 
     window.display();
-}
-
-int main() {
-    Load();
-
-    sf::Clock clock;
-
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-        }
-
-        // Calculate delta time
-        float dt = clock.restart().asSeconds();
-
-        // Update game entities
-        Update(dt);
-
-        // Render everything
-        Render();
-    }
-
-    // Clean up dynamic memory
-    delete player;
-    delete invaderManager;
-
-    return 0;
 }

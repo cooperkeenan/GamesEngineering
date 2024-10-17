@@ -737,6 +737,7 @@ CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o: 2_invaders/InvaderMan
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdint.h \
   2_invaders/InvaderManager.h \
+  2_invaders/game.h \
   2_invaders/ship.h \
   lib/sfml/include/SFML/Config.hpp \
   lib/sfml/include/SFML/Graphics.hpp \
@@ -1551,6 +1552,7 @@ CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o: 2_invaders/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdint.h \
   2_invaders/InvaderManager.h \
+  2_invaders/game.h \
   2_invaders/ship.h \
   lib/sfml/include/SFML/Config.hpp \
   lib/sfml/include/SFML/Graphics.hpp \
@@ -2443,8 +2445,6 @@ CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: 2_invaders/ship.cpp \
   lib/sfml/include/SFML/Window/WindowStyle.hpp
 
 
-2_invaders/game.h:
-
 2_invaders/ship.cpp:
 
 2_invaders/main.cpp:
@@ -2466,10 +2466,6 @@ lib/sfml/include/SFML/Window/Mouse.hpp:
 lib/sfml/include/SFML/Window/Joystick.hpp:
 
 lib/sfml/include/SFML/Window/ContextSettings.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_set_union.h:
-
-lib/sfml/include/SFML/Window/Context.hpp:
 
 lib/sfml/include/SFML/System/Vector3.hpp:
 
@@ -3287,6 +3283,8 @@ lib/sfml/include/SFML/System/MemoryInputStream.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/empty.h:
 
+2_invaders/game.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/arm/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
@@ -3546,6 +3544,10 @@ lib/sfml/include/SFML/Window/Export.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/set_symmetric_difference.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/utility:
+
+lib/sfml/include/SFML/Window/Context.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_set_union.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
 

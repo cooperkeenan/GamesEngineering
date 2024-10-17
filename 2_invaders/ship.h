@@ -24,3 +24,13 @@ public:
     Invader();
     void Update(const float &dt) override;
 };
+
+class Player : public Ship {
+    public:
+        Player();
+        void Update(const float &dt) override;
+};
+
+// Extern declarations for global variables
+extern std::vector<Ship*> ships;
+extern sf::Texture spritesheet;

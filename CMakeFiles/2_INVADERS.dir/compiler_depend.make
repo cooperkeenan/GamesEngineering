@@ -2362,6 +2362,8 @@ CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: 2_invaders/ship.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include/stdint.h \
+  2_invaders/InvaderManager.h \
+  2_invaders/game.h \
   2_invaders/ship.h \
   lib/sfml/include/SFML/Config.hpp \
   lib/sfml/include/SFML/Graphics.hpp \
@@ -2440,6 +2442,8 @@ CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: 2_invaders/ship.cpp \
   lib/sfml/include/SFML/Window/WindowHandle.hpp \
   lib/sfml/include/SFML/Window/WindowStyle.hpp
 
+
+2_invaders/game.h:
 
 2_invaders/ship.cpp:
 

@@ -9,8 +9,6 @@ sf::Texture spritesheet;
 Player* player = nullptr;
 InvaderManager* invaderManager = nullptr;
 
-std::vector<Ship*> ships; 
-
 void Load() {
     if (!spritesheet.loadFromFile("res/img/invaders_sheet.png")) {
         std::cerr << "Failed to load spritesheet!" << std::endl;

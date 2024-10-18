@@ -1,19 +1,14 @@
-//ship.h
 #pragma once 
 #include <SFML/Graphics.hpp>
 
 class Ship : public sf::Sprite {
 protected:
     sf::IntRect _sprite;
-    //default constructor is hidden
-    Ship();
+    Ship();  // default constructor is hidden
 public:
-    //construstor that takes a sprite
-    explicit Ship(sf::IntRect ir);
-    // pure virtial deconstructor
-    virtual ~Ship() = 0;
-    //Update, virtual so can be overridden but not pure virtual 
-    virtual void Update(const float &dt);
+    explicit Ship(sf::IntRect ir);  // constructor that takes a sprite rect
+    virtual ~Ship() = 0;  // pure virtual destructor
+    virtual void Update(const float &dt);  // Update, virtual so it can be overridden
 };
 
 class Invader : public Ship {
@@ -26,11 +21,10 @@ public:
 };
 
 class Player : public Ship {
-    public:
-        Player();
-        void Update(const float &dt) override;
+public:
+    Player();
+    void Update(const float &dt) override;
 };
 
 // Extern declarations for global variables
-extern std::vector<Ship*> ships;
 extern sf::Texture spritesheet;

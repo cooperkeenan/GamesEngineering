@@ -296,6 +296,54 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s
 .PHONY : 2_invaders/InvaderManager.cpp.s
 
+2_invaders/bullet.o: 2_invaders/bullet.cpp.o
+.PHONY : 2_invaders/bullet.o
+
+# target to build an object file
+2_invaders/bullet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o
+.PHONY : 2_invaders/bullet.cpp.o
+
+2_invaders/bullet.i: 2_invaders/bullet.cpp.i
+.PHONY : 2_invaders/bullet.i
+
+# target to preprocess a source file
+2_invaders/bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.i
+.PHONY : 2_invaders/bullet.cpp.i
+
+2_invaders/bullet.s: 2_invaders/bullet.cpp.s
+.PHONY : 2_invaders/bullet.s
+
+# target to generate assembly for a file
+2_invaders/bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.s
+.PHONY : 2_invaders/bullet.cpp.s
+
+2_invaders/game.o: 2_invaders/game.cpp.o
+.PHONY : 2_invaders/game.o
+
+# target to build an object file
+2_invaders/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o
+.PHONY : 2_invaders/game.cpp.o
+
+2_invaders/game.i: 2_invaders/game.cpp.i
+.PHONY : 2_invaders/game.i
+
+# target to preprocess a source file
+2_invaders/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.i
+.PHONY : 2_invaders/game.cpp.i
+
+2_invaders/game.s: 2_invaders/game.cpp.s
+.PHONY : 2_invaders/game.s
+
+# target to generate assembly for a file
+2_invaders/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.s
+.PHONY : 2_invaders/game.cpp.s
+
 2_invaders/main.o: 2_invaders/main.cpp.o
 .PHONY : 2_invaders/main.o
 
@@ -392,6 +440,12 @@ help:
 	@echo "... 2_invaders/InvaderManager.o"
 	@echo "... 2_invaders/InvaderManager.i"
 	@echo "... 2_invaders/InvaderManager.s"
+	@echo "... 2_invaders/bullet.o"
+	@echo "... 2_invaders/bullet.i"
+	@echo "... 2_invaders/bullet.s"
+	@echo "... 2_invaders/game.o"
+	@echo "... 2_invaders/game.i"
+	@echo "... 2_invaders/game.s"
 	@echo "... 2_invaders/main.o"
 	@echo "... 2_invaders/main.i"
 	@echo "... 2_invaders/main.s"

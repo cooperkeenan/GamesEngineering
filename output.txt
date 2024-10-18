@@ -1,0 +1,399 @@
+
+
+// Contents of 2_invaders/ship.h:
+#pragma once 
+#include <SFML/Graphics.hpp>
+
+class Ship : public sf::Sprite {
+protected:
+    sf::IntRect _sprite;
+    Ship();  // default constructor is hidden
+public:
+    explicit Ship(sf::IntRect ir);  // constructor that takes a sprite rect
+    virtual ~Ship() = 0;  // pure virtual destructor
+    virtual void Update(const float &dt);  // Update, virtual so it can be overridden
+};
+
+class Invader : public Ship {
+public:
+    static bool direction;
+    static float speed;
+    Invader(sf::IntRect ir, sf::Vector2f pos);
+    Invader();
+    void Update(const float &dt) override;
+};
+
+class Player : public Ship {
+public:
+    Player();
+    void Update(const float &dt) override;
+};
+
+// Extern declarations for global variables
+extern sf::Texture spritesheet;
+
+
+// Contents of 2_invaders/InvaderManager.cpp:
+#include "InvaderManager.h"
+#include <SFML/Graphics.hpp>
+#include "ship.h"
+#include "game.h"
+#include <iostream>
+
+InvaderManager::InvaderManager(sf::RenderWindow& win) : window(win) {}
+
+void InvaderManager::GenerateInvaders() {
+    sf::Vector2u windowSize = window.getSize();
+    float windowWidth = static_cast<float>(windowSize.x);
+
+    // Set total number of columns and rows
+    const int totalColumns = 11; 
+    const int totalRows = 5;      
+
+    // Define invader parameters
+    float invaderWidth = 32.0f;  // Width of each invader in pixels
+    float invaderScaleX = 1.3f; // Scaling factor for the width
+    float invaderScaleY = 1.3f; // Scaling factor for the width
+    float horizontalGap = 15.0f; // Horizontal gap between invaders
+    float verticalGap = 50.0f;   // Vertical gap between rows
+    float yPosition = 70.0f;     // Starting y position for the rows
+
+    // Calculate the total width of the invader formation
+    float scaledInvaderWidth = invaderWidth * invaderScaleX;
+    float totalFormationWidth = (totalColumns * scaledInvaderWidth) + (totalColumns - 1) * horizontalGap;
+
+    // Calculate left margin to center the formation
+    float leftMargin = (windowWidth - totalFormationWidth) / 2.0f;
+
+    int vecArr[5] = {0, 32, 64, 96, 128};
+
+    // Generate invaders in an 11x5 grid
+    for (int row = 0; row < totalRows; row++) {
+        for (int col = 0; col < totalColumns; col++) {
+            float xPos = leftMargin + col * (scaledInvaderWidth + horizontalGap);
+            Invader* inv = new Invader(sf::IntRect(sf::Vector2i(vecArr[row], 0), sf::Vector2i(32, 32)), { xPos, yPosition });
+            inv->setScale(invaderScaleX, invaderScaleY);  // Uniform scaling for X and Y
+            ships.push_back(inv);
+        }
+        yPosition += verticalGap;
+    }
+}
+
+
+void InvaderManager::Render() {
+    for (auto ship : ships) {
+        window.draw(*ship);
+    }
+}
+
+void InvaderManager::Update(const float& dt) {
+    //calculate the movement distance based on delta time
+    float movement = speed * dt * (moveRight ? 1.0f : -1.0f);
+
+    bool reachedEdge = false;
+
+    // Update invader positions and check for edge collisions
+    for (auto ship : ships) {
+        ship->move(movement, 0.0f);
+
+        // Check if an invader has reached the screen edge
+        if (moveRight && ship->getPosition().x > gameWidth - 32) {
+            reachedEdge = true;
+        }
+        else if (!moveRight && ship->getPosition().x < 32) {
+            reachedEdge = true;
+        }
+    }
+
+    //Move down if edged is reached 
+    if (reachedEdge) {
+        MoveInvadersDown();
+        moveRight = !moveRight; //reverse direction
+    }
+}
+
+void InvaderManager::MoveInvadersDown() {
+    for (auto ship : ships) {
+        ship->move(0.0f, moveDownDistance);
+    }
+}
+
+
+// Contents of 2_invaders/InvaderManager.h:
+#pragma once
+#include <vector>
+#include <SFML/Graphics.hpp>
+#include "ship.h"
+
+class InvaderManager {
+public:
+    InvaderManager(sf::RenderWindow& window);
+    void GenerateInvaders();
+    void Render();
+    void Update(const float& dt);
+   
+
+private:
+    std::vector<Ship*> ships;  // This will store all invader ships
+    sf::RenderWindow& window;
+
+    //Direction and speed variables 
+    bool moveRight = true;
+    float speed = 25.0f;
+    float moveDownDistance = 13.0f;
+
+    //Moves invaders down when they reach an edge
+    void MoveInvadersDown(); 
+};
+
+
+// Contents of 2_invaders/bullet.h:
+//bullet.h 
+#pragma once
+#include <SFML/Graphics.hpp>
+
+class Bullet : public sf::Sprite {
+public: 
+    //static function to create a bullet
+    static Bullet* CreateBullet(const sf::Vector2f& pos, bool mode);
+
+    void Update(const float &dt);
+    Bullet(const sf::Vector2f &pos, const bool mode);
+    ~Bullet() = default;
+protected:
+    Bullet();
+    //false=player bullet, true=enemy Bullet
+    bool _mode;
+};
+
+// Contents of 2_invaders/game.h:
+// game.h
+#pragma once
+#include <SFML/Graphics.hpp>
+#include "ship.h"
+#include "InvaderManager.h"
+#include "bullet.h" // Required for bullets
+
+// Game dimensions
+constexpr uint16_t gameWidth = 800;
+constexpr uint16_t gameHeight = 600;
+
+// Declare extern variables so they can be used across different files
+extern sf::RenderWindow window;
+extern sf::Texture spritesheet;
+extern Player* player;
+extern InvaderManager* invaderManager;
+extern std::vector<Bullet*> bullets; // Global bullets vector
+
+// Function declarations
+void Load();
+void Update(const float& dt);
+void Render();
+
+
+// Contents of 2_invaders/bullet.cpp:
+//bullet.cpp
+#include "bullet.h"
+#include "game.h"
+
+using namespace sf;
+using namespace std;
+
+
+//Static function definition 
+Bullet* Bullet::CreateBullet(const sf::Vector2f& pos, bool mode){
+    return new Bullet(pos, mode);
+}
+
+// constructor 
+Bullet::Bullet(const sf::Vector2f &pos, const bool mode){
+    setPosition(pos);
+    _mode = mode;
+} 
+
+void Bullet::Update(const float &dt) {
+    move(Vector2f(0, dt * 200.0f * (_mode ? 1.0f : -1.0f)));
+}
+
+// Contents of 2_invaders/main.cpp:
+// main.cpp
+#include <SFML/Graphics.hpp>
+#include "game.h"
+
+int main() {
+    Load();
+
+    sf::Clock clock;
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+
+        // Calculate delta time
+        float dt = clock.restart().asSeconds();
+
+        // Update game entities
+        Update(dt);
+
+        // Render everything
+        Render();
+    }
+
+    // Clean up dynamic memory
+    delete player;
+    delete invaderManager;
+
+    return 0;
+}
+
+
+// Contents of 2_invaders/ship.cpp:
+#include "ship.h"
+#include "game.h"
+#include "bullet.h"
+#include <vector>    
+#include <iostream>  
+
+
+using namespace sf;
+
+extern sf::Texture spritesheet;
+
+bool Invader::direction;
+float Invader::speed;
+
+// Base Ship Constructor
+Ship::Ship() {}
+
+Ship::Ship(IntRect ir) : Sprite() {
+    _sprite = ir;
+    setTexture(spritesheet);
+    setTextureRect(_sprite);
+}
+
+void Ship::Update(const float &dt) {}
+Ship::~Ship() = default;
+
+// Invader Constructor (default)
+Invader::Invader() : Ship() {}
+
+Invader::Invader(sf::IntRect ir, sf::Vector2f pos) : Ship(ir) {
+    setOrigin(Vector2f(16.f, 16.f));
+    setPosition(pos);
+}
+
+void Invader::Update(const float &dt) {
+    Ship::Update(dt);
+
+    // Move left or right based on direction
+    move(Vector2f(dt * (direction ? 1.0f : -1.0f) * speed, 0.0f));
+}
+
+// Player Constructor
+Player::Player() : Ship(IntRect(sf::Vector2i(160, 32), sf::Vector2i(32, 32))) {
+    setPosition(sf::Vector2f(gameWidth * 0.5f, gameHeight - 32.0f));
+}
+
+void Player::Update(const float &dt) {
+    Ship::Update(dt);
+
+    const float speed = 200.0f;
+
+    // Move left 
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        move(-speed * dt, 0.0f);
+    }
+
+    // Move right
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        move(speed * dt, 0.0f);
+    }
+
+    // Shoot bullet
+    static std::vector<Bullet*> bullets;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        bullets.push_back(Bullet::CreateBullet(getPosition(), false));
+        std::cout << "Bullet fired! Current number of bullets: " << bullets.size() << std::endl;
+    }
+
+    // Update bullets and remove those out of bounds
+    for (auto it = bullets.begin(); it != bullets.end(); ) {
+        Bullet* bullet = *it;
+        bullet->Update(dt);
+
+        // Remove bullets that go out of the window bounds
+        if (bullet->getPosition().y < 0 || bullet->getPosition().y > gameHeight) {
+            delete bullet;  // Clean up memory
+            it = bullets.erase(it);
+        } else {
+            ++it;
+        }
+    }
+
+    // Ensure the player does not move off the edges of the screen
+    if (getPosition().x < 16.0f) {
+        setPosition(16.0f, getPosition().y);
+    } else if (getPosition().x > gameWidth - 16.0f) {
+        setPosition(gameWidth - 16.0f, getPosition().y);
+    }
+}
+
+
+// Contents of 2_invaders/game.cpp:
+// game.cpp
+#include "game.h"
+#include "bullet.h"
+#include "InvaderManager.h"
+#include <iostream>
+
+// Define global variables here
+sf::RenderWindow window(sf::VideoMode({gameWidth, gameHeight}), "SFML works!");
+sf::Texture spritesheet;
+Player* player = nullptr;
+InvaderManager* invaderManager = nullptr;
+std::vector<Bullet*> bullets;
+
+// Function definitions
+void Load() {
+    if (!spritesheet.loadFromFile("res/img/invaders_sheet.png")) {
+        std::cerr << "Failed to load spritesheet!" << std::endl;
+    }
+
+    // Create player
+    player = new Player();
+
+    // Initialize InvaderManager
+    invaderManager = new InvaderManager(window);
+    invaderManager->GenerateInvaders();
+}
+
+void Update(const float& dt) {
+    if (player) {
+        player->Update(dt);
+    }
+    if (invaderManager) {
+        invaderManager->Update(dt);
+    }
+}
+
+void Render() {
+    window.clear();
+
+    if (player) {
+        window.draw(*player);
+    }
+
+    if (invaderManager) {
+        invaderManager->Render();
+    }
+
+    for (auto& bullet : bullets) {
+        window.draw(*bullet);
+    }
+
+    window.display();
+}

@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp" "CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o" "gcc" "CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o.d"
+  "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp" "CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o" "gcc" "CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o.d"
+  "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp" "CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o" "gcc" "CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o.d"
   "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp" "CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o" "gcc" "CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o.d"
   "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp" "CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o" "gcc" "CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o.d"
   )

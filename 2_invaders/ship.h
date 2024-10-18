@@ -24,6 +24,9 @@ class Player : public Ship {
 public:
     Player();
     void Update(const float &dt) override;
+private:
+    float fireCooldown;
+    float timeSinceLastFire;
 };
 
 // Extern declarations for global variables

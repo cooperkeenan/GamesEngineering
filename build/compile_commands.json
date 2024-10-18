@@ -13,6 +13,18 @@
 },
 {
   "directory": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-14  -isystem /Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/include -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp",
+  "file": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp",
+  "output": "CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o"
+},
+{
+  "directory": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-14  -isystem /Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/include -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp",
+  "file": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp",
+  "output": "CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o"
+},
+{
+  "directory": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build",
   "command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-14  -isystem /Users/cooperkeenan/Documents/GitHub/GamesEngineering/lib/sfml/include -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -o CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp",
   "file": "/Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp",
   "output": "CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o"

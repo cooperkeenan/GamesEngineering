@@ -1,14 +1,22 @@
+// game.h
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "ship.h"
+#include "InvaderManager.h"
+#include "bullet.h" // Required for bullets
 
 // Game dimensions
 constexpr uint16_t gameWidth = 800;
 constexpr uint16_t gameHeight = 600;
-constexpr uint16_t invaders_rows = 5;
-constexpr uint16_t invaders_columns = 12;
 
-// Declare extern variables
+// Declare extern variables so they can be used across different files
+extern sf::RenderWindow window;
 extern sf::Texture spritesheet;
 extern Player* player;
-extern sf::RenderWindow window;
+extern InvaderManager* invaderManager;
+extern std::vector<Bullet*> bullets; // Global bullets vector
+
+// Function declarations
+void Load();
+void Update(const float& dt);
+void Render();

@@ -27,6 +27,9 @@ class Player : public Ship {
 public:
     Player();
     void Update(const float &dt) override;
+private:
+    float fireCooldown;
+    float timeSinceLastFire;
 };
 
 // Extern declarations for global variables
@@ -154,14 +157,20 @@ private:
 
 class Bullet : public sf::Sprite {
 public: 
-    //static function to create a bullet
-    static Bullet* CreateBullet(const sf::Vector2f& pos, bool mode);
-
-    void Update(const float &dt);
-    Bullet(const sf::Vector2f &pos, const bool mode);
-    ~Bullet() = default;
+    static void Update(const float &dt);
+    static void Render(sf::RenderWindow &window);
+    static void Fire(const sf::Vector2f &pos, const bool mode);
+    static void Init();
+    
+    ~Bullet()=default;
 protected:
+    static unsigned char bulletPointer;
+    static Bullet bullets[256];
+    
+    void _Update(const float &dt);
+
     Bullet();
+
     //false=player bullet, true=enemy Bullet
     bool _mode;
 };
@@ -192,28 +201,60 @@ void Render();
 
 
 // Contents of 2_invaders/bullet.cpp:
-//bullet.cpp
 #include "bullet.h"
 #include "game.h"
-
 using namespace sf;
-using namespace std;
 
+unsigned char Bullet::bulletPointer = 0;
+Bullet Bullet::bullets[256]; // Array to hold all bullets
 
-//Static function definition 
-Bullet* Bullet::CreateBullet(const sf::Vector2f& pos, bool mode){
-    return new Bullet(pos, mode);
+Bullet::Bullet() {
+    // Constructor to initialize bullet properties
+    _mode = false;
 }
 
-// constructor 
-Bullet::Bullet(const sf::Vector2f &pos, const bool mode){
-    setPosition(pos);
-    _mode = mode;
-} 
+void Bullet::Fire(const sf::Vector2f &pos, const bool mode) {
+    bullets[bulletPointer].setTexture(spritesheet);
+    
+    // Set bullet's position and texture rectangle for the sprite
+    bullets[bulletPointer].setTextureRect(IntRect(160, 32, 8, 26));
+    bullets[bulletPointer].setPosition(pos);
+    bullets[bulletPointer]._mode = mode;
+
+    bulletPointer++;
+    if (bulletPointer >= 256) {
+        bulletPointer = 0; // Loop back to reuse bullet slots
+    }
+}
 
 void Bullet::Update(const float &dt) {
-    move(Vector2f(0, dt * 200.0f * (_mode ? 1.0f : -1.0f)));
+    for (auto &bullet : bullets) {
+        bullet._Update(dt);
+    }
 }
+
+void Bullet::Render(sf::RenderWindow &window) {
+    for (auto &bullet : bullets) {
+        // Only render bullets that are on the screen (i.e., with a position set)
+        if (bullet.getPosition().y != 0) {
+            window.draw(bullet);
+        }
+    }
+}
+
+void Bullet::_Update(const float &dt) {
+    // Only update bullet if it is active
+    if (getPosition().y != 0) {
+        // Move bullet upwards if it's a player bullet, downwards if it's an enemy bullet.
+        move(Vector2f(0, dt * 200.0f * (_mode ? 1.0f : -1.0f)));
+
+        // If the bullet goes off-screen, reset its position (considered inactive)
+        if (getPosition().y < 0 || getPosition().y > gameHeight) {
+            setPosition(0, 0); // Setting position to 0 means inactive
+        }
+    }
+}
+
 
 // Contents of 2_invaders/main.cpp:
 // main.cpp
@@ -296,12 +337,18 @@ void Invader::Update(const float &dt) {
 // Player Constructor
 Player::Player() : Ship(IntRect(sf::Vector2i(160, 32), sf::Vector2i(32, 32))) {
     setPosition(sf::Vector2f(gameWidth * 0.5f, gameHeight - 32.0f));
+
+    fireCooldown = 0.5f;
+    timeSinceLastFire = fireCooldown;
 }
 
 void Player::Update(const float &dt) {
     Ship::Update(dt);
 
     const float speed = 200.0f;
+
+    // Update the time since the last shot
+    timeSinceLastFire += dt;
 
     // Move left 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
@@ -313,10 +360,13 @@ void Player::Update(const float &dt) {
         move(speed * dt, 0.0f);
     }
 
-    // Shoot bullet
-    static std::vector<Bullet*> bullets;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        bullets.push_back(Bullet::CreateBullet(getPosition(), false));
+    // Shoot bullet if cooldown is complete
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W)) 
+        && timeSinceLastFire >= fireCooldown) {
+        
+        bullet::Fire(getPosition(), false);
+        timeSinceLastFire = 0.0f; // Reset the timer after firing
+
         std::cout << "Bullet fired! Current number of bullets: " << bullets.size() << std::endl;
     }
 
@@ -369,6 +419,9 @@ void Load() {
     // Initialize InvaderManager
     invaderManager = new InvaderManager(window);
     invaderManager->GenerateInvaders();
+
+    //Initialise bullets
+    Bullet::Init();
 }
 
 void Update(const float& dt) {
@@ -378,22 +431,27 @@ void Update(const float& dt) {
     if (invaderManager) {
         invaderManager->Update(dt);
     }
+
+    //Update bullets 
+    Bullet::Update(dt);
 }
 
 void Render() {
     window.clear();
 
+    // Draw player
     if (player) {
         window.draw(*player);
     }
 
+    // Draw invaders
     if (invaderManager) {
         invaderManager->Render();
     }
 
-    for (auto& bullet : bullets) {
-        window.draw(*bullet);
-    }
+    //draw bulets
+    Bullet::Render(window);
 
     window.display();
 }
+

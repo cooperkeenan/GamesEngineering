@@ -23,6 +23,9 @@ void Load() {
     // Initialize InvaderManager
     invaderManager = new InvaderManager(window);
     invaderManager->GenerateInvaders();
+
+    //Initialise bullets
+    Bullet::Init();
 }
 
 void Update(const float& dt) {
@@ -32,6 +35,9 @@ void Update(const float& dt) {
     if (invaderManager) {
         invaderManager->Update(dt);
     }
+
+    //Update bullets 
+    Bullet::Update(dt);
 }
 
 void Render() {
@@ -47,10 +53,8 @@ void Render() {
         invaderManager->Render();
     }
 
-    // Draw bullets (use the global `bullets` vector)
-    for (auto& bullet : bullets) {
-        window.draw(*bullet);
-    }
+    //draw bulets
+    Bullet::Render(window);
 
     window.display();
 }

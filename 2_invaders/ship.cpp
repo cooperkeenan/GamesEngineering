@@ -69,7 +69,7 @@ void Player::Update(const float &dt) {
     if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W)) 
         && timeSinceLastFire >= fireCooldown) {
         
-        bullets.push_back(Bullet::CreateBullet(getPosition(), false));
+        Bullet::Fire(getPosition(), false);
         timeSinceLastFire = 0.0f; // Reset the timer after firing
 
         std::cout << "Bullet fired! Current number of bullets: " << bullets.size() << std::endl;

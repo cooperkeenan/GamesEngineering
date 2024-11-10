@@ -73,71 +73,71 @@ CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o: CMakeFiles/2_INVADERS
 CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp
 CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o: CMakeFiles/2_INVADERS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp
 
 CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.i
 
 CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/InvaderManager.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/InvaderManager.cpp.s
 
 CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o: CMakeFiles/2_INVADERS.dir/flags.make
 CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp
 CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o: CMakeFiles/2_INVADERS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp
 
 CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.i
 
 CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/bullet.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/bullet.cpp.s
 
 CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o: CMakeFiles/2_INVADERS.dir/flags.make
 CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp
 CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o: CMakeFiles/2_INVADERS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp
 
 CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.i
 
 CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/game.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.s
 
 CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o: CMakeFiles/2_INVADERS.dir/flags.make
 CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp
 CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o: CMakeFiles/2_INVADERS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp
 
 CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.i
 
 CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/main.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.s
 
 CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: CMakeFiles/2_INVADERS.dir/flags.make
 CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp
 CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o: CMakeFiles/2_INVADERS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o -MF CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o.d -o CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp
 
 CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp > CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.i
 
 CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/2_invaders/ship.cpp -o CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.s
 
 # Object files for target 2_INVADERS
 2_INVADERS_OBJECTS = \
@@ -156,9 +156,9 @@ bin/2_INVADERS: CMakeFiles/2_INVADERS.dir/2_invaders/game.cpp.o
 bin/2_INVADERS: CMakeFiles/2_INVADERS.dir/2_invaders/main.cpp.o
 bin/2_INVADERS: CMakeFiles/2_INVADERS.dir/2_invaders/ship.cpp.o
 bin/2_INVADERS: CMakeFiles/2_INVADERS.dir/build.make
-bin/2_INVADERS: lib/sfml/lib/libsfml-graphics-d.2.6.1.dylib
-bin/2_INVADERS: lib/sfml/lib/libsfml-window-d.2.6.1.dylib
-bin/2_INVADERS: lib/sfml/lib/libsfml-system-d.2.6.1.dylib
+bin/2_INVADERS: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
+bin/2_INVADERS: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
+bin/2_INVADERS: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 bin/2_INVADERS: CMakeFiles/2_INVADERS.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/2_INVADERS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2_INVADERS.dir/link.txt --verbose=$(VERBOSE)

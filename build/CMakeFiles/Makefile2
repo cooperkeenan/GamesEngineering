@@ -65,151 +65,32 @@ CMAKE_BINARY_DIR = /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build
 # The main recursive "all" target.
 all: CMakeFiles/PRACTICAL_1.dir/all
 all: CMakeFiles/2_INVADERS.dir/all
-all: lib/sfml/all
+all: CMakeFiles/PRACTICAL_3.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: lib/sfml/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/PRACTICAL_1.dir/clean
 clean: CMakeFiles/2_INVADERS.dir/clean
-clean: lib/sfml/clean
+clean: CMakeFiles/PRACTICAL_3.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml
-
-# Recursive "all" directory target.
-lib/sfml/all: lib/sfml/src/SFML/all
-.PHONY : lib/sfml/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/preinstall: lib/sfml/src/SFML/preinstall
-.PHONY : lib/sfml/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/clean: lib/sfml/src/SFML/clean
-.PHONY : lib/sfml/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/all: lib/sfml/src/SFML/System/all
-lib/sfml/src/SFML/all: lib/sfml/src/SFML/Window/all
-lib/sfml/src/SFML/all: lib/sfml/src/SFML/Network/all
-lib/sfml/src/SFML/all: lib/sfml/src/SFML/Graphics/all
-lib/sfml/src/SFML/all: lib/sfml/src/SFML/Audio/all
-.PHONY : lib/sfml/src/SFML/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/preinstall: lib/sfml/src/SFML/System/preinstall
-lib/sfml/src/SFML/preinstall: lib/sfml/src/SFML/Window/preinstall
-lib/sfml/src/SFML/preinstall: lib/sfml/src/SFML/Network/preinstall
-lib/sfml/src/SFML/preinstall: lib/sfml/src/SFML/Graphics/preinstall
-lib/sfml/src/SFML/preinstall: lib/sfml/src/SFML/Audio/preinstall
-.PHONY : lib/sfml/src/SFML/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/clean: lib/sfml/src/SFML/System/clean
-lib/sfml/src/SFML/clean: lib/sfml/src/SFML/Window/clean
-lib/sfml/src/SFML/clean: lib/sfml/src/SFML/Network/clean
-lib/sfml/src/SFML/clean: lib/sfml/src/SFML/Graphics/clean
-lib/sfml/src/SFML/clean: lib/sfml/src/SFML/Audio/clean
-.PHONY : lib/sfml/src/SFML/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML/Audio
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/Audio/all: lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
-.PHONY : lib/sfml/src/SFML/Audio/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/Audio/preinstall:
-.PHONY : lib/sfml/src/SFML/Audio/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/Audio/clean: lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean
-.PHONY : lib/sfml/src/SFML/Audio/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML/Graphics
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/Graphics/all: lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
-.PHONY : lib/sfml/src/SFML/Graphics/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/Graphics/preinstall:
-.PHONY : lib/sfml/src/SFML/Graphics/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/Graphics/clean: lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/clean
-.PHONY : lib/sfml/src/SFML/Graphics/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML/Network
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/Network/all: lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/all
-.PHONY : lib/sfml/src/SFML/Network/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/Network/preinstall:
-.PHONY : lib/sfml/src/SFML/Network/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/Network/clean: lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/clean
-.PHONY : lib/sfml/src/SFML/Network/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML/System
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/System/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-.PHONY : lib/sfml/src/SFML/System/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/System/preinstall:
-.PHONY : lib/sfml/src/SFML/System/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/System/clean: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/clean
-.PHONY : lib/sfml/src/SFML/System/clean
-
-#=============================================================================
-# Directory level rules for directory lib/sfml/src/SFML/Window
-
-# Recursive "all" directory target.
-lib/sfml/src/SFML/Window/all: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-.PHONY : lib/sfml/src/SFML/Window/all
-
-# Recursive "preinstall" directory target.
-lib/sfml/src/SFML/Window/preinstall:
-.PHONY : lib/sfml/src/SFML/Window/preinstall
-
-# Recursive "clean" directory target.
-lib/sfml/src/SFML/Window/clean: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/clean
-.PHONY : lib/sfml/src/SFML/Window/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/PRACTICAL_1.dir
 
 # All Build rule for target.
-CMakeFiles/PRACTICAL_1.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-CMakeFiles/PRACTICAL_1.dir/all: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-CMakeFiles/PRACTICAL_1.dir/all: lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
+CMakeFiles/PRACTICAL_1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_1.dir/build.make CMakeFiles/PRACTICAL_1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_1.dir/build.make CMakeFiles/PRACTICAL_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=5,6 "Built target PRACTICAL_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=7,8 "Built target PRACTICAL_1"
 .PHONY : CMakeFiles/PRACTICAL_1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PRACTICAL_1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 72
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PRACTICAL_1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
 .PHONY : CMakeFiles/PRACTICAL_1.dir/rule
@@ -227,17 +108,15 @@ CMakeFiles/PRACTICAL_1.dir/clean:
 # Target rules for target CMakeFiles/2_INVADERS.dir
 
 # All Build rule for target.
-CMakeFiles/2_INVADERS.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-CMakeFiles/2_INVADERS.dir/all: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-CMakeFiles/2_INVADERS.dir/all: lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
+CMakeFiles/2_INVADERS.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_INVADERS.dir/build.make CMakeFiles/2_INVADERS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=1,2,3,4 "Built target 2_INVADERS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target 2_INVADERS"
 .PHONY : CMakeFiles/2_INVADERS.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/2_INVADERS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 74
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/2_INVADERS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
 .PHONY : CMakeFiles/2_INVADERS.dir/rule
@@ -252,135 +131,30 @@ CMakeFiles/2_INVADERS.dir/clean:
 .PHONY : CMakeFiles/2_INVADERS.dir/clean
 
 #=============================================================================
-# Target rules for target lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir
+# Target rules for target CMakeFiles/PRACTICAL_3.dir
 
 # All Build rule for target.
-lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target sfml-system"
-.PHONY : lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
+CMakeFiles/PRACTICAL_3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=9,10,11,12 "Built target PRACTICAL_3"
+.PHONY : CMakeFiles/PRACTICAL_3.dir/all
 
 # Build rule for subdir invocation for target.
-lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
+CMakeFiles/PRACTICAL_3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PRACTICAL_3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
-.PHONY : lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/rule
+.PHONY : CMakeFiles/PRACTICAL_3.dir/rule
 
 # Convenience name for target.
-sfml-system: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/rule
-.PHONY : sfml-system
+PRACTICAL_3: CMakeFiles/PRACTICAL_3.dir/rule
+.PHONY : PRACTICAL_3
 
 # clean rule for target.
-lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/clean
-.PHONY : lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/clean
-
-#=============================================================================
-# Target rules for target lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir
-
-# All Build rule for target.
-lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sfml-window"
-.PHONY : lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-
-# Build rule for subdir invocation for target.
-lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 46
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
-.PHONY : lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
-
-# Convenience name for target.
-sfml-window: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/rule
-.PHONY : sfml-window
-
-# clean rule for target.
-lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/clean
-.PHONY : lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/clean
-
-#=============================================================================
-# Target rules for target lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir
-
-# All Build rule for target.
-lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=47,48,49,50,51,52,53,54 "Built target sfml-network"
-.PHONY : lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/all
-
-# Build rule for subdir invocation for target.
-lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 21
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
-.PHONY : lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/rule
-
-# Convenience name for target.
-sfml-network: lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/rule
-.PHONY : sfml-network
-
-# clean rule for target.
-lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/clean
-.PHONY : lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/clean
-
-#=============================================================================
-# Target rules for target lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir
-
-# All Build rule for target.
-lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target sfml-graphics"
-.PHONY : lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
-
-# Build rule for subdir invocation for target.
-lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 70
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
-.PHONY : lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/rule
-
-# Convenience name for target.
-sfml-graphics: lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/rule
-.PHONY : sfml-graphics
-
-# clean rule for target.
-lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/clean
-.PHONY : lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/clean
-
-#=============================================================================
-# Target rules for target lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir
-
-# All Build rule for target.
-lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all: lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/all
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target sfml-audio"
-.PHONY : lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
-
-# Build rule for subdir invocation for target.
-lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 29
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles 0
-.PHONY : lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule
-
-# Convenience name for target.
-sfml-audio: lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/rule
-.PHONY : sfml-audio
-
-# clean rule for target.
-lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean
-.PHONY : lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean
+CMakeFiles/PRACTICAL_3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/clean
+.PHONY : CMakeFiles/PRACTICAL_3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

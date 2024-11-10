@@ -73,15 +73,15 @@ CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: CMakeFiles/PRACTICAL_1.dir/fl
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o: CMakeFiles/PRACTICAL_1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -MF CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o.d -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -MF CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o.d -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o -c /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp
 
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp > CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp > CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.i
 
 CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s"
-	/opt/homebrew/bin/aarch64-apple-darwin22-g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cooperkeenan/Documents/GitHub/GamesEngineering/practical_1/main.cpp -o CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s
 
 # Object files for target PRACTICAL_1
 PRACTICAL_1_OBJECTS = \
@@ -92,9 +92,9 @@ PRACTICAL_1_EXTERNAL_OBJECTS =
 
 bin/PRACTICAL_1: CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.o
 bin/PRACTICAL_1: CMakeFiles/PRACTICAL_1.dir/build.make
-bin/PRACTICAL_1: lib/sfml/lib/libsfml-graphics-d.2.6.1.dylib
-bin/PRACTICAL_1: lib/sfml/lib/libsfml-window-d.2.6.1.dylib
-bin/PRACTICAL_1: lib/sfml/lib/libsfml-system-d.2.6.1.dylib
+bin/PRACTICAL_1: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
+bin/PRACTICAL_1: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
+bin/PRACTICAL_1: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 bin/PRACTICAL_1: CMakeFiles/PRACTICAL_1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/PRACTICAL_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PRACTICAL_1.dir/link.txt --verbose=$(VERBOSE)

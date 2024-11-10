@@ -65,26 +65,6 @@ CMAKE_BINARY_DIR = /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-.PHONY : package/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cpack --config ./CPackSourceConfig.cmake /Users/cooperkeenan/Documents/GitHub/GamesEngineering/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-.PHONY : package_source/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -104,51 +84,6 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"bin\" \"devel\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -208,69 +143,17 @@ PRACTICAL_1/fast:
 .PHONY : 2_INVADERS/fast
 
 #=============================================================================
-# Target rules for targets named sfml-system
+# Target rules for targets named PRACTICAL_3
 
 # Build rule for target.
-sfml-system: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-system
-.PHONY : sfml-system
+PRACTICAL_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PRACTICAL_3
+.PHONY : PRACTICAL_3
 
 # fast build rule for target.
-sfml-system/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build.make lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir/build
-.PHONY : sfml-system/fast
-
-#=============================================================================
-# Target rules for targets named sfml-window
-
-# Build rule for target.
-sfml-window: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-window
-.PHONY : sfml-window
-
-# fast build rule for target.
-sfml-window/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir/build
-.PHONY : sfml-window/fast
-
-#=============================================================================
-# Target rules for targets named sfml-network
-
-# Build rule for target.
-sfml-network: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-network
-.PHONY : sfml-network
-
-# fast build rule for target.
-sfml-network/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir/build
-.PHONY : sfml-network/fast
-
-#=============================================================================
-# Target rules for targets named sfml-graphics
-
-# Build rule for target.
-sfml-graphics: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-graphics
-.PHONY : sfml-graphics
-
-# fast build rule for target.
-sfml-graphics/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
-.PHONY : sfml-graphics/fast
-
-#=============================================================================
-# Target rules for targets named sfml-audio
-
-# Build rule for target.
-sfml-audio: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfml-audio
-.PHONY : sfml-audio
-
-# fast build rule for target.
-sfml-audio/fast:
-	$(MAKE) $(MAKESILENT) -f lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
-.PHONY : sfml-audio/fast
+PRACTICAL_3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/build
+.PHONY : PRACTICAL_3/fast
 
 2_invaders/InvaderManager.o: 2_invaders/InvaderManager.cpp.o
 .PHONY : 2_invaders/InvaderManager.o
@@ -416,6 +299,78 @@ practical_1/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_1.dir/build.make CMakeFiles/PRACTICAL_1.dir/practical_1/main.cpp.s
 .PHONY : practical_1/main.cpp.s
 
+practical_3/entity.o: practical_3/entity.cpp.o
+.PHONY : practical_3/entity.o
+
+# target to build an object file
+practical_3/entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/entity.cpp.o
+.PHONY : practical_3/entity.cpp.o
+
+practical_3/entity.i: practical_3/entity.cpp.i
+.PHONY : practical_3/entity.i
+
+# target to preprocess a source file
+practical_3/entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/entity.cpp.i
+.PHONY : practical_3/entity.cpp.i
+
+practical_3/entity.s: practical_3/entity.cpp.s
+.PHONY : practical_3/entity.s
+
+# target to generate assembly for a file
+practical_3/entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/entity.cpp.s
+.PHONY : practical_3/entity.cpp.s
+
+practical_3/main.o: practical_3/main.cpp.o
+.PHONY : practical_3/main.o
+
+# target to build an object file
+practical_3/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/main.cpp.o
+.PHONY : practical_3/main.cpp.o
+
+practical_3/main.i: practical_3/main.cpp.i
+.PHONY : practical_3/main.i
+
+# target to preprocess a source file
+practical_3/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/main.cpp.i
+.PHONY : practical_3/main.cpp.i
+
+practical_3/main.s: practical_3/main.cpp.s
+.PHONY : practical_3/main.s
+
+# target to generate assembly for a file
+practical_3/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/main.cpp.s
+.PHONY : practical_3/main.cpp.s
+
+practical_3/player.o: practical_3/player.cpp.o
+.PHONY : practical_3/player.o
+
+# target to build an object file
+practical_3/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/player.cpp.o
+.PHONY : practical_3/player.cpp.o
+
+practical_3/player.i: practical_3/player.cpp.i
+.PHONY : practical_3/player.i
+
+# target to preprocess a source file
+practical_3/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/player.cpp.i
+.PHONY : practical_3/player.cpp.i
+
+practical_3/player.s: practical_3/player.cpp.s
+.PHONY : practical_3/player.s
+
+# target to generate assembly for a file
+practical_3/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRACTICAL_3.dir/build.make CMakeFiles/PRACTICAL_3.dir/practical_3/player.cpp.s
+.PHONY : practical_3/player.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -423,20 +378,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... package"
-	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... 2_INVADERS"
 	@echo "... PRACTICAL_1"
-	@echo "... sfml-audio"
-	@echo "... sfml-graphics"
-	@echo "... sfml-network"
-	@echo "... sfml-system"
-	@echo "... sfml-window"
+	@echo "... PRACTICAL_3"
 	@echo "... 2_invaders/InvaderManager.o"
 	@echo "... 2_invaders/InvaderManager.i"
 	@echo "... 2_invaders/InvaderManager.s"
@@ -455,6 +400,15 @@ help:
 	@echo "... practical_1/main.o"
 	@echo "... practical_1/main.i"
 	@echo "... practical_1/main.s"
+	@echo "... practical_3/entity.o"
+	@echo "... practical_3/entity.i"
+	@echo "... practical_3/entity.s"
+	@echo "... practical_3/main.o"
+	@echo "... practical_3/main.i"
+	@echo "... practical_3/main.s"
+	@echo "... practical_3/player.o"
+	@echo "... practical_3/player.i"
+	@echo "... practical_3/player.s"
 .PHONY : help
 
 

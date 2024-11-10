@@ -1,0 +1,65 @@
+
+
+// Contents of practical_3/player.cpp:
+//player.cpp
+#include player.h
+using namespace sf;
+using namespace std;
+
+void Player::Update(double dt) {
+    //move in 4 directions based on keys
+
+    Entity::Update(dt); 
+}
+
+
+Player::Player()
+    : _speed(200.0f), Entity(make_unique<CircleShape>(25.f)) {
+    _shape->setFillColor(Color::Magenta);
+    _shape->setOrigin(Vector2f(25.f, 25.f));
+}
+
+
+void Player::Render(sf::RenderWindow &window) const {
+    window.draw(*_shape);
+}
+
+// Contents of practical_3/player.h:
+//player.h
+#pragma once 
+#include "entity.h"
+
+class Player : public Entity {
+    private:
+        float _speed;
+    
+    public:
+        void Update(double dt) override;
+        Player();
+        void Render(sf::RenderWindow &window) const override;
+};
+
+// Contents of practical_3/entity.h:
+//entity.h
+#pragma once
+
+#include <SFML/Graphics.hpp>
+#include <memory>
+
+class Entity {
+    protected:
+        std::unique_ptr<sf::Shape> _shape;
+        sf::Vector2f _position;
+        Entity(std::unique_ptr<sf::Shape> shp);
+    
+    public:
+        Entity() = delete;
+        virtual ~Entity() = default;
+
+        virtual void Update(const double dt);
+        virtual void Render(sf::RenderWindow &window) const = 0;
+
+        const sf::Vector2f getPosition();
+        void setPosition(const sf::Vector2f &pos);
+        void move(const sf::Vector2f &pos);
+};
